@@ -34,9 +34,9 @@ jobs:
       - name: Build
         cmd: ./scripts/release.sh --nightly
       - name: Upload artifacts
-          uses: actions/upload-artifact@v2
-          with:
-            path: |
+        uses: actions/upload-artifact@v2
+        with:
+          path: |
               ../archive/${{ env.NIGHTLY_VERSION }}/Hammerspoon-${{ env.NIGHTLY_VERSION }}.zip
               ../archive/${{ env.NIGHTLY_VERSION }}/Hammerspoon-dSYM-${{ env.NIGHTLY_VERSION }}.zip
               ../archive/${{ env.NIGHTLY_VERSION }}/Hammerspoon-docs-${{ env.NIGHTLY_VERSION }}.zip
